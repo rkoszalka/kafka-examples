@@ -1,6 +1,5 @@
-package org.koszalka.kafka.tutorial1;
+package org.koszalka.kafka.examples;
 
-import kafka.tools.ConsoleProducer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -25,6 +24,8 @@ public class ProducerDemo {
 
         // send dat
         producer.send(record);
+        producer.flush();
+        producer.close();
     }
 
 }
